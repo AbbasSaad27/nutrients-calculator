@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nutrients Calculator</title>
+    <style>
+      .nutrients-table {
+        min-width: 400px;
+        width: 80%;
+        text-align: center;
+      }
+      th {
+        font-weight: 500;
+      }
+      th,
+      td {
+        padding: 5px;
+      }
+      input[type="radio"] {
+        cursor: pointer;
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="product-selection">
+      <input
+        type="radio"
+        name="product-select"
+        id="bonV"
+        value="Bon Vivant"
+        class="product-radio"
+      />
+      <label for="bonV">Bon Vivant</label>
+      <input
+        type="radio"
+        name="product-select"
+        id="shanti"
+        value="Shanti A&B"
+        class="product-radio"
+      />
+      <label for="shanti">Shanti A&B</label>
+    </div>
+    <div class="select-measure">
+      <input
+        type="radio"
+        name="calc-method"
+        id="metric"
+        value="Liters"
+        class="measure-radio"
+      />
+      <label for="metric">Metric</label>
+      <input
+        type="radio"
+        name="calc-method"
+        id="usa"
+        value="Gallons (US)"
+        class="measure-radio"
+      />
+      <label for="usa">USA</label>
+    </div>
+    <div class="amount-input">
+      <input
+        type="number"
+        name="measure-amount"
+        id="measure-input"
+        min="0"
+        value="1"
+        step="any"
+      />
+      <label for="measure-input" class="measure-label">Gallon (US)</label>
+    </div>
+    <div class="buttons">
+      <button type="button" class="btn btn-calculate">Calculate</button>
+      <button type="button" class="btn btn-reset">Reset</button>
+    </div>
+    <table cellspacing="10px" class="nutrients-table">
+      <thead>
+        <tr>
+          <th width="45">Weeks</th>
+          <th width="40" class="product-variant">Bon Vivant Grow</th>
+          <th width="40">Xtreme Veg</th>
+          <th width="40">Xtreme Juice *</th>
+          <th width="40">Root Tonic</th>
+          <th width="40">Cobra **</th>
+          <th width="40">XtremeGrow</th>
+          <th width="40">Early TurnA ***</th>
+          <th width="40">Early TurnB ***</th>
+          <th width="40">Xtreme Boost</th>
+          <th width="40">Samurai PK</th>
+          <th width="40">Rhino Drive</th>
+          <th width="40">Power Rock ****</th>
+          <th width="40">Brix</th>
+          <th width="40">Xtreme Silica</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Week 1 Grow</td>
+          <td>700ppm</td>
+          <td><span class="amount">4</span>ml</td>
+          <td><span class="amount">10</span>ml</td>
+          <td><span class="amount">4</span>ml</td>
+          <td><span class="amount">1/2</span>tsp.</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>4ml</td>
+          <td><span class="amount">5</span>ml</td>
+        </tr>
+        <tr>
+          <td>Week 2 Grow</td>
+          <td>750ppm</td>
+          <td><span class="amount">4</span>ml</td>
+          <td><span class="amount">10</span>ml</td>
+          <td><span class="amount">4</span>ml</td>
+          <td><span class="amount">1/2</span>tsp.</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>4ml</td>
+          <td><span class="amount">5</span>ml</td>
+        </tr>
+        <tr>
+          <td>Week 3 Grow</td>
+          <td>800ppm</td>
+          <td><span class="amount">4</span>ml</td>
+          <td><span class="amount">10</span>ml</td>
+          <td><span class="amount">4</span>ml</td>
+          <td><span class="amount">1/2</span>tsp.</td>
+          <td><span class="amount">2</span>ml</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>4ml</td>
+          <td><span class="amount">5</span>ml</td>
+        </tr>
+        <tr>
+          <td>Week 4 Grow</td>
+          <td>900ppm</td>
+          <td><span class="amount">4</span>ml</td>
+          <td><span class="amount">10</span>ml</td>
+          <td><span class="amount">4</span>ml</td>
+          <td><span class="amount">1/2</span>tsp.</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>4ml</td>
+          <td><span class="amount">5</span>ml</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="nutrients-table" cellspacing="10px">
+      <thead>
+        <tr>
+          <th width="45">Weeks</th>
+          <th width="40" class="product-variant">Bon Vivant Bloom</th>
+          <th width="40">Xtreme Veg</th>
+          <th width="40">Xtreme Juice *</th>
+          <th width="40">Root Tonic</th>
+          <th width="40">Cobra **</th>
+          <th width="40">XtremeGrow</th>
+          <th width="40">Early TurnA ***</th>
+          <th width="40">Early TurnB ***</th>
+          <th width="40">Xtreme Boost</th>
+          <th width="40">Samurai PK</th>
+          <th width="40">Rhino Drive</th>
+          <th width="40">Power Rock ****</th>
+          <th width="40">Brix</th>
+          <th width="40">Xtreme Silica</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Week 1 Bloom</td>
+          <td>1000ppm</td>
+          <td><span class="amount">4</span>ml</td>
+          <td><span class="amount">10</span>ml</td>
+          <td><span class="amount">4</span>ml</td>
+          <td><span class="amount">1/2</span>tsp.</td>
+          <td></td>
+          <td><span class="amount">10</span>ml</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>4ml</td>
+          <td><span class="amount">5</span>ml</td>
+        </tr>
+        <tr>
+          <td>Week 2 Bloom</td>
+          <td>1000ppm</td>
+          <td><span class="amount">4</span>ml</td>
+          <td><span class="amount">10</span>ml</td>
+          <td><span class="amount">4</span>ml</td>
+          <td><span class="amount">1/2</span>tsp.</td>
+          <td></td>
+          <td></td>
+          <td><span class="amount">10</span>ml</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>4ml</td>
+          <td><span class="amount">5</span>ml</td>
+        </tr>
+        <tr>
+          <td>Week 3 Bloom</td>
+          <td>1100ppm</td>
+          <td></td>
+          <td><span class="amount">10</span>ml</td>
+          <td><span class="amount">4</span>ml</td>
+          <td><span class="amount">1/2</span>tsp.</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><span class="amount">4</span>ml</td>
+          <td><span class="amount">4</span>ml</td>
+          <td></td>
+          <td></td>
+          <td>4ml</td>
+          <td><span class="amount">5</span>ml</td>
+        </tr>
+        <tr>
+          <td>Week 4 Bloom</td>
+          <td>1200ppm</td>
+          <td></td>
+          <td><span class="amount">10</span>ml</td>
+          <td><span class="amount">4</span>ml</td>
+          <td><span class="amount">1/2</span>tsp.</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><span class="amount">4</span>ml</td>
+          <td><span class="amount">4</span>ml</td>
+          <td><span class="amount">10</span>ml</td>
+          <td></td>
+          <td>4ml</td>
+          <td><span class="amount">5</span>ml</td>
+        </tr>
+        <tr>
+          <td>Week 5 Bloom</td>
+          <td>1200ppm</td>
+          <td></td>
+          <td><span class="amount">10</span>ml</td>
+          <td><span class="amount">4</span>ml</td>
+          <td>**</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><span class="amount">4</span>ml</td>
+          <td><span class="amount">4</span>ml</td>
+          <td><span class="amount">10</span>ml</td>
+          <td></td>
+          <td>4ml</td>
+          <td><span class="amount">5</span>ml</td>
+        </tr>
+        <tr>
+          <td>Week 6 Bloom</td>
+          <td>1200ppm</td>
+          <td></td>
+          <td><span class="amount">10</span>ml</td>
+          <td><span class="amount">4</span>ml</td>
+          <td>**</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><span class="amount">4</span>ml</td>
+          <td><span class="amount">4</span>ml</td>
+          <td><span class="amount">10</span>ml</td>
+          <td></td>
+          <td>4ml</td>
+          <td><span class="amount">5</span>ml</td>
+        </tr>
+        <tr>
+          <td>Week 7 Bloom</td>
+          <td>1200ppm</td>
+          <td></td>
+          <td><span class="amount">10</span>ml</td>
+          <td><span class="amount">4</span>ml</td>
+          <td>**</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><span class="amount">4</span>ml</td>
+          <td><span class="amount">4</span>ml</td>
+          <td><span class="amount">10</span>ml</td>
+          <td><span class="amount">8</span>ml</td>
+          <td>4ml</td>
+          <td><span class="amount">5</span>ml</td>
+        </tr>
+        <tr>
+          <td>Week 8 Bloom</td>
+          <td>1200ppm</td>
+          <td></td>
+          <td><span class="amount">10</span>ml</td>
+          <td><span class="amount">4</span>ml</td>
+          <td>**</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><span class="amount">4</span>ml</td>
+          <td><span class="amount">4</span>ml</td>
+          <td><span class="amount">10</span>ml</td>
+          <td><span class="amount">8</span>ml</td>
+          <td>4ml</td>
+          <td><span class="amount">5</span>ml</td>
+        </tr>
+        <tr>
+          <td>Week 9 Bloom</td>
+          <td>1100ppm</td>
+          <td></td>
+          <td><span class="amount">10</span>ml</td>
+          <td><span class="amount">4</span>ml</td>
+          <td>**</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><span class="amount">4</span>ml</td>
+          <td><span class="amount">4</span>ml</td>
+          <td><span class="amount">10</span>ml</td>
+          <td></td>
+          <td>4ml</td>
+          <td><span class="amount">5</span>ml</td>
+        </tr>
+        <tr>
+          <td>Week 10 Bloom</td>
+          <td>1100ppm</td>
+          <td></td>
+          <td><span class="amount">10</span>ml</td>
+          <td><span class="amount">4</span>ml</td>
+          <td>**</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><span class="amount">4</span>ml</td>
+          <td><span class="amount">4</span>ml</td>
+          <td><span class="amount">10</span>ml</td>
+          <td></td>
+          <td>4ml</td>
+          <td><span class="amount">5</span>ml</td>
+        </tr>
+        <tr>
+          <td>Week 11 Bloom</td>
+          <td>1100ppm</td>
+          <td></td>
+          <td><span class="amount">10</span>ml</td>
+          <td><span class="amount">4</span>ml</td>
+          <td>**</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><span class="amount">4</span>ml</td>
+          <td><span class="amount">4</span>ml</td>
+          <td><span class="amount">10</span>ml</td>
+          <td></td>
+          <td>4ml</td>
+          <td><span class="amount">5</span>ml</td>
+        </tr>
+        <tr>
+          <td>Week 12 Bloom</td>
+          <td>Water</td>
+          <td></td>
+          <td>Water</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>Water</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    <script src="./js/calculator.js"></script>
+  </body>
+</html>
