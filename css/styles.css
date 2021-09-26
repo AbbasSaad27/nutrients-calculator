@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  overflow-x: hidden;
+}
+
+table {
+  empty-cells: show;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+}
+th {
+  font-weight: 500;
+}
+th,
+td {
+  padding: 5px;
+}
+td {
+  background-color: #d8d8d8;
+  color: #3a4f66;
+}
+input[type="radio"] {
+  cursor: pointer;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.title {
+  margin: 30px 0;
+}
+
+.product-selection {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.calc-inputs {
+  display: flex;
+  margin-bottom: 20px;
+  width: 40%;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.measure-radio:not(:last-child) {
+  margin-left: 20px;
+}
+
+#measure-input {
+  border: 1px solid gray;
+  padding: 5px;
+  transition: all 0.3s;
+  width: 50px;
+}
+#measure-input:focus {
+  outline: none;
+  border-color: #2872fa;
+}
+
+/* btn styles */
+.btn {
+  background-color: #2872fa;
+  padding: 10px;
+  border: none;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  transition: all 0.2s ease;
+}
+.btn:hover {
+  background-color: #1559ed;
+  top: -3px;
+}
+.btn-calculate {
+  margin-right: 20px;
+}
+
+/* table styles */
+
+.table-wrapper {
+  width: 80%;
+  overflow: auto;
+}
+
+.nutrients-table {
+  width: 100%;
+  text-align: center;
+  color: white;
+  margin: 0 auto;
+  /* width: 30vw;
+  font-size: 10px; */
+}
+
+.week-grow th {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, #ff0b00),
+    color-stop(100%, #cd0900)
+  );
+}
+
+.week-bloom th {
+  background: linear-gradient(to bottom, #6c016d 0%, #f803de 100%);
+}
+
+.first-cell {
+  background-color: #abcf38;
+}
+
+@media only screen and (max-width: 1220px) {
+  .calc-inputs {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .table-wrapper {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 1060px) {
+  .nutrients-table {
+    font-size: 14px;
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 970px) {
+  .title {
+    font-size: 24px;
+  }
+  .calc-inputs {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 940px) {
+  .nutrients-table {
+    font-size: 12px;
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .nutrients-table {
+    font-size: 10px;
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .title {
+    font-size: 20px;
+  }
+  .calc-inputs {
+    height: 150px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .bon-vivant {
+    margin-right: 20px;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .product-selection {
+    width: 80%;
+  }
+}

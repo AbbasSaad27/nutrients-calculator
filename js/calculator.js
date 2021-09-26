@@ -97,6 +97,8 @@ const reset = function () {
   amounts.forEach(function (el, i) {
     el.innerText = initAmount[i];
   });
+  measureInput.value = 1;
+  measureLabel.innerText = "Gallon (US)";
 };
 
 // event listeners
