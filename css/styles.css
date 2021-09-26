@@ -17,6 +17,9 @@ table {
   flex-direction: column;
   align-items: center;
 }
+table {
+  text-align: center;
+}
 th {
   font-weight: 500;
 }
@@ -105,11 +108,8 @@ input[type="number"] {
 
 .nutrients-table {
   width: 100%;
-  text-align: center;
   color: white;
   margin: 0 auto;
-  /* width: 30vw;
-  font-size: 10px; */
 }
 
 .week-grow th {
@@ -122,12 +122,31 @@ input[type="number"] {
   );
 }
 
-.week-bloom th {
+.week-bloom th,
+.info-table-header {
   background: linear-gradient(to bottom, #6c016d 0%, #f803de 100%);
+  color: white;
 }
 
 .first-cell {
   background-color: #abcf38;
+}
+
+.infos {
+  width: 80%;
+  margin: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.references-table {
+  width: 80%;
+}
+
+.references-table td {
+  text-align: left;
+  padding: 5px;
 }
 
 @media only screen and (max-width: 1220px) {
@@ -137,7 +156,8 @@ input[type="number"] {
 }
 
 @media only screen and (max-width: 1200px) {
-  .table-wrapper {
+  .table-wrapper,
+  .infos {
     width: 90%;
   }
 }
@@ -146,6 +166,15 @@ input[type="number"] {
   .nutrients-table {
     font-size: 14px;
     width: 80%;
+  }
+  .infos {
+    justify-content: center;
+  }
+  .references {
+    margin-top: 20px;
+  }
+  .references-table {
+    margin: auto;
   }
 }
 
@@ -161,13 +190,6 @@ input[type="number"] {
 @media only screen and (max-width: 940px) {
   .nutrients-table {
     font-size: 12px;
-    width: 70%;
-  }
-}
-
-@media only screen and (max-width: 860px) {
-  .nutrients-table {
-    font-size: 10px;
     width: 70%;
   }
 }
@@ -189,4 +211,12 @@ input[type="number"] {
   .product-selection {
     width: 80%;
   }
+  .references,
+  .conversion,
+  .references-table,
+  .conversion table {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 300px) {
 }
