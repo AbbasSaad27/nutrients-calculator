@@ -47,7 +47,7 @@ const calc = function () {
     // for tsp
     if (initAmount[i] == "1/2") {
       let result =
-        measureLabelVal === "Liters" ? (0.5 * amount) / 3.785 : 0.5 * amount;
+        measureLabelVal === "Litres" ? (0.5 * amount) / 3.785 : 0.5 * amount;
 
       // check for 0.5
       if (result === 0.5) {
@@ -60,7 +60,7 @@ const calc = function () {
     }
     // calculating the value based on selected measured system
     let calcedVal =
-      measureLabelVal === "Liters"
+      measureLabelVal === "Litres"
         ? (initAmount[i] * amount) / 3.785
         : initAmount[i] * amount;
     el.innerText = isFloat(calcedVal)
